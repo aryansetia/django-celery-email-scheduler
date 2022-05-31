@@ -17,3 +17,11 @@ Run the django server as localhost
 ```python
 python manage.py runserver
 ```
+Start a Celery worker service 
+```python
+celery -A celery_email_scheduler worker --loglevel=info
+```
+As a separate process, start the celery beat service
+```python
+celery -A celery_email_scheduler beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+```
