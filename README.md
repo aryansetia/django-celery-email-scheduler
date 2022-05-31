@@ -15,4 +15,5 @@ EMAIL_HOST_PASSWORD = ''
 ### To run
 Run the django server as localhost
 ```python
-python manage.py runserver```
+python manage.py runserver
+```
